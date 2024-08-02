@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Navbar } from "@/components/navbar";
+import { Navbar } from "@/components/layout/navbar";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,7 +15,12 @@ export default function RootLayout({
 }>) {
   return (
     <html className="dark" lang="en">
-      <body><Navbar />{children}</body>
+      <TooltipProvider>
+        <body>
+          <Navbar />
+          {children}
+        </body>
+      </TooltipProvider>
     </html>
   );
 }
