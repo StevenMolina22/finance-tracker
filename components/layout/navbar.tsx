@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { BadgeDollarSign } from "lucide-react";
 
 const links = [
   { href: "#", label: "Product" },
@@ -12,11 +13,11 @@ export function Navbar() {
     <div className="flex items-center justify-between py-4 px-24 bg-background text-foreground">
       <div>
         <Link href="#" className="flex items-center" prefetch={false}>
-          <LogInIcon className="w-6 h-6" />
-          <span className="ml-2 text-lg font-semibold">Company</span>
+          <BadgeDollarSign className="w-6 h-6" />
+          <span className="ml-2 text-lg font-semibold">Finance Tracker</span>
         </Link>
       </div>
-      <nav className="lg:flex hidden space-x-4">
+      {/* <nav className="lg:flex hidden space-x-4">
         {links.map((link, i) => (
           <Link
             key={i}
@@ -27,7 +28,7 @@ export function Navbar() {
             {link.label}
           </Link>
         ))}
-      </nav>
+      </nav> */}
       <div className="lg:flex hidden items-center space-x-4">
         <Button variant="outline" className="text-sm">
           Login

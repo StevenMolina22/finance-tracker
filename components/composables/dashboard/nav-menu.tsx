@@ -1,20 +1,22 @@
-import { Button } from "@/components/ui/button";
+import { TransactionForm } from "@/app/transactions/transaction-form";
+import { Button, buttonVariants } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import {
-    DropdownMenu,
-    DropdownMenuCheckboxItem,
-    DropdownMenuContent,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
-    DropdownMenuTrigger
+  DropdownMenu,
+  DropdownMenuCheckboxItem,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
-    File,
-    ListFilter,
-    PlusCircle
-} from "lucide-react";
-
-
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import { TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { cn } from "@/lib/utils";
+import { File, ListFilter, PlusCircle } from "lucide-react";
 
 export function NavigationMenu() {
   return (
@@ -51,12 +53,19 @@ export function NavigationMenu() {
             Export
           </span>
         </Button>
-        <Button size="sm" className="h-8 gap-1">
-          <PlusCircle className="h-3.5 w-3.5" />
-          <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
-            Add Product
-          </span>
-        </Button>
+        <Dialog>
+          <DialogTrigger>
+            <div  className={cn("h-8 gap-1", buttonVariants({size: "sm"}))}>
+              <PlusCircle className="h-3.5 w-3.5" />
+              <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
+                Add Transaction
+              </span>
+            </div>
+          </DialogTrigger>
+          <DialogContent>
+            <TransactionForm />
+          </DialogContent>
+        </Dialog>
       </div>
     </div>
   );

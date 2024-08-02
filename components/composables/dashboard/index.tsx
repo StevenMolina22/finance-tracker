@@ -19,14 +19,15 @@ export function Dashboard() {
       <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-14">
         <Header />
         <main className="grid flex-1 items-start gap-4 p-4 sm:px-6 sm:py-0 md:gap-8">
+          {/* <DeleteDialog /> */}
           <Tabs defaultValue="all">
             <NavigationMenu />
             <TabsContent className="mt-8" value="all">
               <Card x-chunk="dashboard-06-chunk-0">
                 <CardHeader>
-                  <CardTitle>Products</CardTitle>
+                  <CardTitle>Transactions</CardTitle>
                   <CardDescription>
-                    Manage your products and view their sales performance.
+                    Manage your transactions and view their stats.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -35,7 +36,7 @@ export function Dashboard() {
                 <CardFooter>
                   <div className="text-xs text-muted-foreground">
                     Showing <strong>1-10</strong> of <strong>32</strong>{" "}
-                    products
+                    Transactions
                   </div>
                 </CardFooter>
               </Card>

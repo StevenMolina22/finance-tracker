@@ -67,7 +67,7 @@ export function Header() {
               className="flex items-center gap-4 px-2.5 text-foreground"
             >
               <Package className="h-5 w-5" />
-              Products
+              Transactions
             </Link>
             <Link
               href="#"
@@ -96,12 +96,12 @@ export function Header() {
           <BreadcrumbSeparator />
           <BreadcrumbItem>
             <BreadcrumbLink asChild>
-              <Link href="#">Products</Link>
+              <Link href="#">Transactions</Link>
             </BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbPage>All Products</BreadcrumbPage>
+            <BreadcrumbPage>All Transactions</BreadcrumbPage>
           </BreadcrumbItem>
         </BreadcrumbList>
       </Breadcrumb>
