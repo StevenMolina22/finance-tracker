@@ -1,6 +1,6 @@
 import { type Transaction } from "@/types/transactions";
 import { fetcher } from "@/utils/fetcher";
-import { TransactionCard } from "./transactions-card";
+import { TransactionCard } from "../../components/composables/transactions-card";
 
 async function TransactionsPage() {
   const transactions: Transaction[] = await fetcher("/transactions");

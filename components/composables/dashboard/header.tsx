@@ -1,31 +1,32 @@
 import {
-    Breadcrumb,
-    BreadcrumbItem,
-    BreadcrumbLink,
-    BreadcrumbList,
-    BreadcrumbPage,
-    BreadcrumbSeparator,
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbPage,
+  BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { Button } from "@/components/ui/button";
 import {
-    DropdownMenu,
-    DropdownMenuContent,
-    DropdownMenuItem,
-    DropdownMenuLabel,
-    DropdownMenuSeparator,
-    DropdownMenuTrigger
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Input } from "@/components/ui/input";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 import {
-    Home,
-    LineChart,
-    Package,
-    Package2,
-    PanelLeft,
-    Search,
-    ShoppingCart,
-    Users2
+  Home,
+  LineChart,
+  Package,
+  Package2,
+  PanelLeft,
+  Search,
+  ShoppingCart,
+  Users2,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -115,19 +116,7 @@ export function Header() {
       </div>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button
-            variant="outline"
-            size="icon"
-            className="overflow-hidden rounded-full"
-          >
-            <Image
-              src="https://s1.abcstatics.com/abc/www/multimedia/summum/2024/03/26/Dwayne-Johnson-Rbsh0WjtSMx1ODYjkQSuxeL-1200x840@diario_abc.jpg"
-              width={36}
-              height={36}
-              alt="Avatar"
-              className="overflow-hidden rounded-full object-cover object-center h-full"
-            />
-          </Button>
+          <UserButton />
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
           <DropdownMenuLabel>My Account</DropdownMenuLabel>

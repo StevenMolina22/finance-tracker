@@ -1,5 +1,4 @@
 import { API_URL } from "@/config/env";
-import { Transaction, type TransactionForm } from "@/types/transactions";
 
 export const fetcher = (url: string) => fetch(API_URL + url).then((res) => res.json());
 

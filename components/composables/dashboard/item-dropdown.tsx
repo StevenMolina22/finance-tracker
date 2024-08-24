@@ -29,7 +29,7 @@ export function ItemDropdown() {
         <DropdownMenuLabel>Actions</DropdownMenuLabel>
         <DropdownMenuItem>Edit</DropdownMenuItem>
         <DropdownMenuItem onClick={handleDeleteClick}>
-          <DeleteTransactionDialog />
+          <DeleteTransactionDialog id={0} />
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

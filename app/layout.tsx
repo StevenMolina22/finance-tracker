@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Navbar } from "@/components/layout/navbar";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import {ClerkProvider} from "@clerk/nextjs";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -14,13 +15,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className="dark" lang="en">
-      <TooltipProvider>
-        <body>
-          <Navbar />
-          {children}
-        </body>
-      </TooltipProvider>
-    </html>
+    <ClerkProvider>
+      <html className="dark" lang="en">
+        <TooltipProvider>
+          <body>
+            <Navbar />
+            {children}
+          </body>
+        </TooltipProvider>
+      </html>
+    </ClerkProvider>
   );
 }

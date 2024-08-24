@@ -1,5 +1,5 @@
 import React from 'react'
-import { TransactionForm } from '../transaction-form'
+import { TransactionForm } from '../../components/composables/transaction-form'
 
 function NewTransationPage() {
   return (

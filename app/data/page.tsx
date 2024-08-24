@@ -9,4 +9,4 @@ function DataPage() {
   )
 }
 
-export default DataPage
+export default DataPage;
