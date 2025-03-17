@@ -143,7 +143,7 @@ The codebase is organized into reusable components, utilities, and types, making
 
 ### 6.2 For Recruiters
 - **Skills Demonstrated**: Full-stack development, modern JavaScript, UI/UX design, and API integration.
-- **Hire Me**: Contact me at [your-email@example.com] to discuss opportunities or collaborations.
+- **Hire Me**: Contact me at [stevenmolina2205@gmail.com] to discuss opportunities or collaborations.
 
 ### 6.3 For Clients
 - **Customization**: Tailor this app for your business needs (e.g., multi-user support, reporting).
